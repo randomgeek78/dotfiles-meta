@@ -4,4 +4,4 @@ if ! command -v xsel &> /dev/null; then
     sudo apt-get install -y xsel
 fi
 	
-gpg -d files.gpg | xsel -b
+key=$(gpg -d files.gpg)
