@@ -1,3 +1,4 @@
 #!/bin/bash
 
 key=$(gpg -d files.gpg)
+export key
