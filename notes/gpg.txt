@@ -1,0 +1,12 @@
+# https://stackoverflow.com/a/59170001
+
+cat <<_E_ >> ~/.gnupg/gpg.conf
+use-agent 
+pinentry-mode loopback
+_E_
+
+cat <<_E_ >> ~/.gnupg/gpg-agent.conf
+allow-loopback-pinentry
+_E_
+
+echo RELOADAGENT | gpg-connect-agent
