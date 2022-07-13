@@ -1,4 +1,5 @@
 #!/bin/bash
 
-key=$(gpg -d files.gpg)
+# https://askubuntu.com/questions/1080204/gpg-problem-with-the-agent-permission-denied
+key=$(gpg --decrypt --pinentry-mode=loopback files.gpg)
 export key
