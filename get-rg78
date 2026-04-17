@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Run as:
+# . get-rg78
+
 # https://askubuntu.com/questions/1080204/gpg-problem-with-the-agent-permission-denied
 key=$(gpg --decrypt --pinentry-mode=loopback files-rg78.gpg)
 export key
