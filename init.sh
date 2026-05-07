@@ -11,6 +11,9 @@ if ! command -v "yadm" >& /dev/null; then
   elif command -v "dnf" >& /dev/null; then
     sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:TheLocehiliosan:yadm/Fedora_33/home:TheLocehiliosan:yadm.repo
     sudo dnf install -y yadm
+
+  elif command -v "pacman" >& /dev/null; then
+    sudo pacman -Sy neovim yadm
   fi
 fi
 
