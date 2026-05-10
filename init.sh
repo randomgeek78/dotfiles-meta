@@ -1,11 +1,10 @@
 git config user.name "Random Geek"
 git config user.email randomgeek78@gmail.com
 
-sudo apt update -y
-sudo apt upgrade -y
 
 if ! command -v "yadm" >& /dev/null; then
   if command -v "apt" >& /dev/null; then
+    sudo apt update -y
     sudo apt install -y yadm
 
   elif command -v "dnf" >& /dev/null; then
